@@ -6,13 +6,10 @@
     font-weight: 400;
 }
 
-
-
 .wrapper {
     height: 100vh;
     width: 100vw;
 }
-
 
 .principal {
     display: inline-block;
@@ -53,9 +50,7 @@ button:hover {
     background-color: #5D5D7D;
     text-transform: uppercase;
     transition: 0.5s;
-
 }
-
 
 .container {
     display: inline-block;
@@ -80,7 +75,6 @@ span {
     color: #9499EA;
 }
 
-
 .menu:hover {
     color: #9499EA;
     text-decoration: underline;
@@ -94,10 +88,126 @@ span:hover {
     transition: 0.5s;
 }
 
-
 img {
     position: relative;
     top: 13%;
     width: 360px;
     left: -100px;
+}
+
+/* Media Query para telas menores (dispositivos móveis) */
+
+@media screen and (max-width: 768px) {
+    /* Layout geral */
+    .wrapper {
+        /* Mantém altura total da viewport */
+        height: 100vh;
+        /* Usa largura total */
+        width: 100%;
+        /* Adiciona flex para reorganizar elementos */
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Seção principal */
+    .principal {
+        /* Ocupa 100% da largura */
+        width: 100%;
+        /* Centraliza conteúdo */
+        text-align: center;
+        /* Remove padding excessivo */
+        padding: 20px;
+    }
+
+    /* Títulos */
+    h1 {
+        /* Reduz tamanho da fonte */
+        font-size: 40px;
+        line-height: 1.2;
+        /* Remove padding lateral exagerado */
+        padding: 20px 20px 10px;
+        /* Centraliza texto */
+        text-align: center;
+    }
+
+    /* Parágrafos */
+    p {
+        /* Reduz tamanho da fonte */
+        font-size: 14px;
+        line-height: 1.5;
+        /* Remove padding lateral exagerado */
+        padding: 0 20px 20px;
+        /* Centraliza texto */
+        text-align: center;
+    }
+
+    /* Botão */
+    button {
+        /* Ajusta largura */
+        width: 200px;
+        /* Centraliza botão */
+        margin: 20px auto;
+        /* Reduz tamanho da fonte */
+        font-size: 18px;
+    }
+
+    /* Container lateral */
+    .container {
+        /* Remove posicionamento absoluto */
+        position: relative;
+        /* Ocupa largura total */
+        width: 100%;
+        /* Altura ajustada */
+        height: auto;
+    }
+
+    /* Cabeçalho */
+    header {
+        /* Ajusta layout do cabeçalho */
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    /* Imagem */
+    img {
+        /* Ajusta posicionamento e tamanho */
+        position: static;
+        width: 100%;
+        max-width: 300px;
+        margin: 20px auto;
+        display: block;
+        left: 0;
+        top: 0;
+    }
+}
+
+/* Breakpoint para tablets */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Estilos intermediários */
+    .principal {
+        width: 70%;
+    }
+
+    .container {
+        width: 30%;
+    }
+
+    h1 {
+        font-size: 50px;
+        padding: 100px 200px 20px 30px;
+    }
+
+    p {
+        font-size: 15px;
+        padding: 0 150px 20px 30px;
+    }
+
+    img {
+        width: 300px;
+        top: 10%;
+        left: -50px;
+    }
 }
